@@ -174,7 +174,7 @@ AI & Artificial Intelligence \\
 ML & Machine Learning \\
 ```
 
-## Nützliche Optionen
+## Nützliche Hinweise
 
 - Sprache: In `00_packages.tex` ist `\usepackage[ngerman]{babel}` bereits gesetzt (deutsche Bezeichnungen & Silbentrennung).
 
