@@ -1,0 +1,39 @@
+\documentclass[12pt,a4paper]{article}
+
+\input{Text/00_vor_text/00_packages.tex}
+\input{Text/00_vor_text/00_config.tex}
+
+\begin{document}
+\pagenumbering{roman}
+\input{Text/00_vor_text/01_deckblatt.tex}
+\input{Text/00_vor_text/02_sperrvermerk.tex}
+\input{Text/00_vor_text/03_zusammenfassung.tex}
+\input{Text/00_vor_text/04_inhaltsverzeichnis.tex}
+\input{Text/00_vor_text/05_listen.tex}
+
+\pagenumbering{arabic}
+
+\section{Einleitung}
+\subsection{Unternehmens- und Abteilungsübersicht}
+\input{Text/01_haupt_text/00_einleitung/01_unternehmensuebersicht.tex}
+\subsection{Motivation und Forschungsziele}
+\subsection{Forschungsfrage}
+\subsection{Methodischer Überblick}
+\subsection{Aufbau der Arbeit}
+\newpage
+
+\pagenumbering{roman}
+\setcounter{page}{8}
+
+\input{Text/02_nach_text/01_literaturverzeichnis.tex}
+\newpage
+
+\appendix
+\section{Anhang}
+\input{Text/02_nach_text/00_anhang/00_projekt.tex}
+
+\newpage
+\addcontentsline{toc}{section}{Erklärung der Eigenständigkeit}
+\input{Text/02_nach_text/02_autorenschaft.tex}
+
+\end{document}

@@ -1,0 +1,94 @@
+% Packages
+\usepackage[nottoc,notlot,notlof]{tocbibind}
+\usepackage[utf8]{inputenc}
+\usepackage{blindtext}
+\usepackage{lineno}
+\usepackage{tocloft}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{longtable}
+\usepackage[parfill]{parskip} %Einrückungen
+\usepackage{times}
+\usepackage[toc,page]{appendix}
+\usepackage[T1]{fontenc}
+\usepackage[ngerman]{babel}
+\usepackage[export]{adjustbox} % for adjustbox package (for titlepage)
+\usepackage{enumitem}
+\usepackage{mathptmx} % Times New Roman font
+\usepackage[round,sort]{natbib} % Changed from square,comma,numbers to round,sort
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{caption}
+\captionsetup[figure]{font=small} % Schriftgröße für Abbildungsbeschriftungen auf 10pt setzen
+\captionsetup[table]{font=small}  % Schriftgröße für Tabellenbeschriftungen auf 10pt setzen
+\usepackage{hyperref} % Fixed the missing closing brace
+\usepackage{acronym} % for acronym environment used in 05_lists.tex
+\usepackage[a4paper,left=2.5cm,right=3cm,top=2.5cm,bottom=2.5cm]{geometry}
+\usepackage{setspace}
+\usepackage{etoolbox} % Add the etoolbox package
+\usepackage{float}
+\usepackage{tabularx}
+\setstretch{1.5}
+
+%Code Layout for Listings
+
+\definecolor{boxgray}{gray}{0.9}
+\definecolor{darkgreen}{cmyk}{1, 0, 1, 0.5}
+\definecolor{commentgray}{cmyk}{0.2, 0, 0, 0.5}
+\definecolor{codebackground}{cmyk}{0.03,0.02,0.02,0.0}
+\definecolor{codecomment}{cmyk}{0.33,0.0,0.87,0.39}
+\definecolor{codekeyword}{cmyk}{1.0,0.87,0.0,0.32}
+\definecolor{codestring}{cmyk}{0.0,1.0,0.82,0.17}
+\definecolor{codeframe}{cmyk}{0.0,0.0,0.0,1.0}
+\colorlet{numb}{magenta!60!black}
+
+\lstset{
+    basicstyle=\ttfamily\scriptsize,
+    commentstyle=\color{commentgray}\textit,
+    showstringspaces=false,
+    numbers = left,
+    stringstyle=\color{darkgreen},
+    keywordstyle=\color{cyan},
+    tabsize=2,
+    fontadjust=true,
+    frame=single,
+    backgroundcolor=\color{boxgray},
+    captionpos=b,
+    linewidth=0.94\linewidth,
+    xleftmargin=0cm, % Left margin
+    xrightmargin=0cm, % Right margin
+    breaklines=true,
+    aboveskip=16pt,
+    inputencoding=utf8,
+    extendedchars=true,
+    literate=
+        {0}{{{\color{numb}0}}}{1}
+        {1}{{{\color{numb}1}}}{1}
+        {2}{{{\color{numb}2}}}{1}
+        {3}{{{\color{numb}3}}}{1}
+        {4}{{{\color{numb}4}}}{1}
+        {5}{{{\color{numb}5}}}{1}
+        {6}{{{\color{numb}6}}}{1}
+        {7}{{{\color{numb}7}}}{1}
+        {8}{{{\color{numb}8}}}{1}
+        {9}{{{\color{numb}9}}}{1}
+}
+
+\lstdefinelanguage{JavaScript}{
+    keywords={break, case, catch, continue, debugger, default, delete, do, else, finally, for, function, if, in, instanceof, new, return, switch, this, throw, try, typeof, var, void, while, with, let, const, export, import, class, extends},
+    keywordstyle=\color{codekeyword}\bfseries,
+    ndkeywords={boolean, null, true, false, int, float, char, unsigned, signed, short, long, double, typeof, class, export, boolean, throw, implements, import, this},
+    ndkeywordstyle=\color{codekeyword}\bfseries,
+    identifierstyle=\color{black},
+    sensitive=false,
+    comment=[l]{//},
+    morecomment=[s]{/*}{*/},
+    commentstyle=\color{codecomment}\ttfamily,
+    stringstyle=\color{codestring}\ttfamily,
+    morestring=[b]',
+    morestring=[b]"
+}
+
+
