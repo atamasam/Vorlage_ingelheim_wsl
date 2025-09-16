@@ -21,14 +21,14 @@ Diese Vorlage hilft Studierenden, schnell eine formale Projekt- oder Bachelorarb
 
 - Abbildungen und Tabellen einfügen
 
-- Nützliche Optionen (Sprache, Zeilennummern)
+- Nützliche Hinweise (Sprache, Zeilennummern)
+- Weitere Tipps und LaTeX-Befehle
 
 ---
 
 ## Anforderungen
 
 Alles ist vorbereitet. Optional empfehlen wir VS Code mit der Erweiterung "LaTeX Workshop".
-
 
 ## Schnellstart (PDF bauen)
 
@@ -49,14 +49,15 @@ Hinweis: Beim Kompilieren erzeugt LaTeX Hilfsdateien (z. B. `.aux`, `.log`, `.ou
 Wichtig: `main.tex` ist das Herz der Vorlage – hier steuerst du Aufbau, Reihenfolge und Einbindung aller Inhalte.
 
 ```text
-Vorlage-ingelheim-wsl/
+Vorlage2_deutsch_wsl/
 ├─ main.tex                   # Hauptdatei: lädt Vor-Text, Inhalte, Anhänge
 ├─ literatur.bib              # BibTeX-Datenbank für Literatur
 ├─ setup.sh                   # Skript zum Aufsetzen von LaTeX
 ├─ README.md                  # Anleitung und Hinweise zur Vorlage
+├─ CHEAT_SHEET.md             # LaTeX-Befehle und Tipps für Studierende
 ├─ Abbildungen/               # Grafiken (Logos, Abbildungen, Signatur)
-│   ├─ 00_firma.png
 │   ├─ 00_dhbw_logo.jpg
+│   ├─ 00_firma.png
 │   ├─ 01_example_image.png
 │   ├─ 02_firma_alternativ.jpg
 │   └─ 09_signature.png
@@ -74,6 +75,7 @@ Vorlage-ingelheim-wsl/
     │       └─ 01_unternehmensuebersicht.tex
     └─ 02_nach_text/         # Back-Matter
         ├─ 00_anhang/        # Anhang (z. B. 00_projekt.tex)
+        │   └─ 00_projekt.tex
         ├─ 01_literaturverzeichnis.tex # bindet literatur.bib ein
         └─ 02_autorenschaft.tex       # Erklärung der Eigenständigkeit
 ```
@@ -135,7 +137,6 @@ Optionen für deinen Workflow:
 - Lege neue Dateien und Ordner unter `Text/01_haupt_text/...` an und binde sie mit `\input{...}` ein.
 - Oder schreibe den Text direkt in `main.tex` in die vorgesehenen Abschnitte.
 
-
 Tipp: Benenne Ordner/Dateien klar nach Kapiteln (z. B. `02_methodology/00_overview.tex`) und füge in `main.tex` entsprechende `\section{...}`/`\subsection{...}` und `\input{...}` ein.
 
 ## Zitieren und Literatur (BibTeX/Natbib)
@@ -182,6 +183,12 @@ ML & Machine Learning \\
 - Zeilenabstand: Über `\setstretch{1.5}` in `00_packages.tex` gesetzt (Doppelzeiligkeit für Arbeiten).
 - Ränder: In `00_packages.tex` via `geometry` konfiguriert.
 
+## 📋 Weitere Tipps und LaTeX-Befehle
 
+Für eine umfassende Übersicht der wichtigsten LaTeX-Befehle, Formatierungstipps und bewährte Praktiken für Projektarbeiten, siehe die **[CHEAT_SHEET.md](CHEAT_SHEET.md)**.
 
-
+Die Cheat Sheet enthält:
+- Erweiterte Formatierungsbefehle
+- Tipps für professionelle Darstellung
+- Häufige Fehler und wie man sie vermeidet
+- Spezielle Befehle für wissenschaftliche Arbeiten

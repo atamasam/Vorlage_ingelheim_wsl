@@ -1,6 +1,0 @@
-# Ignore LaTeX build artifacts and generated PDF
-_output/
-build/
-main.pdf
-
-
