@@ -3,11 +3,11 @@
 
 set -e
 
-echo "[0/5] Updating package lists with apt and apt-get..."
+echo "[0/4] Updating package lists with apt and apt-get..."
 sudo apt update
 sudo apt-get update
 
-echo "[1/5] Checking for required LaTeX packages in WSL..."
+echo "[1/4] Checking for required LaTeX packages in WSL..."
 
 REQUIRED_PKGS=(
     texlive-latex-extra
@@ -36,31 +36,13 @@ else
     sudo apt-get install -y "${MISSING_PKGS[@]}"
 fi
 
-echo "[2/5] Checking for Python3 and installing if not found..."
+echo "[2/4] Checking for Python3 and installing if not found..."
 if ! command -v python3 >/dev/null 2>&1; then
   echo "Python3 not found. Installing Python3..."
   sudo apt-get install -y python3
 fi
 
-echo "[3/5] Checking for VSCode 'code' command in PATH..."
-if ! command -v code >/dev/null 2>&1; then
-	echo "'code' command not found in PATH."
-	echo "To install the LaTeX Workshop extension, open VSCode, press Ctrl+Shift+P, type 'Shell Command: Install 'code' command in PATH', and run it."
-	echo "Then re-run this script, or manually install the 'LaTeX Workshop' extension in VSCode (search for 'James-Yu.latex-workshop')."
-	EXT_OK=0
-else
-	echo "Checking if LaTeX Workshop extension is already installed..."
-	if code --list-extensions | grep -q "^James-Yu.latex-workshop$"; then
-		echo "LaTeX Workshop extension is already installed."
-		EXT_OK=1
-	else
-		echo "Installing LaTeX Workshop extension for VSCode in WSL..."
-		code --install-extension James-Yu.latex-workshop --force
-		EXT_OK=1
-	fi
-fi
-
-echo "[4/5] Configuring VSCode user settings for LaTeX Workshop..."
+echo "[3/4] Configuring VSCode user settings for LaTeX Workshop..."
 
 # Detect if running in WSL and set Windows VSCode settings path if so
 if grep -qiE 'microsoft|wsl' /proc/version 2>/dev/null; then
@@ -181,7 +163,7 @@ with open(settings_path, 'w', encoding='utf-8') as f:
 	json.dump(settings, f, indent=4, ensure_ascii=False)
 EOF
 
-echo "[5/5] Setup complete!"
+echo "[4/4] Setup complete!"
 echo ""
 echo ""
 if [ "$EXT_OK" = "0" ]; then

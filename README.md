@@ -55,6 +55,7 @@ Vorlage2_deutsch_wsl/
 ├─ setup.sh                   # Skript zum Aufsetzen von LaTeX
 ├─ README.md                  # Anleitung und Hinweise zur Vorlage
 ├─ CHEAT_SHEET.md             # LaTeX-Befehle und Tipps für Studierende
+├─ .gitignore                 # Ignore File für die Repository (Nicht relevant für allgemeine Nutzung der Vorlage)
 ├─ Abbildungen/               # Grafiken (Logos, Abbildungen, Signatur)
 │   ├─ 00_dhbw_logo.jpg
 │   ├─ 00_firma.png
