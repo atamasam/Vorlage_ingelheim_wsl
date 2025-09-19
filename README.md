@@ -154,6 +154,20 @@ Tipp: Benenne Ordner/Dateien klar nach Kapiteln (z. B. `02_methodology/00_overvi
   - Autor-Jahr im Text: `\citet{schluessel}` → Mustermann (2024)
   - Autor-Jahr in Klammern: `\citep{schluessel}` → (Mustermann, 2024)
 
+**Hinweise für korrektes Zitieren und BibTeX-Einträge:**
+
+- Jeder Eintrag in der `literatur.bib` muss mindestens ein `author`-Feld und ein `year`-Feld enthalten.
+
+```tex
+@misc{Quelle,
+  author       = {Max Mustermann},
+  year         = {2025}
+}
+```
+
+- Verwende für Internetquellen den Typ `@misc` anstelle von `@online`, da viele BibTeX-Stile (z.B. apalike) `@online` nicht unterstützen.
+- Bei mehreren Autoren im `author`-Feld müssen die Namen mit `and` getrennt werden (z.B. `Max Mustermann and Erika Musterfrau`), nicht mit Komma.
+
 ## Abbildungen und Tabellen einfügen
 
 Lege Grafiken in `Abbildungen/` ab und nutze z. B.:
